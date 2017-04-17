@@ -1,2 +1,2 @@
-# bloc-chat
-Angular &amp; Firebase real time messaging app
+# Chatter
+Angular & Firebase powered real time messaging web app

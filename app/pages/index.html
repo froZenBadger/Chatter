@@ -1,11 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="chatter">
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Bloc Base Project</title>
+    <title>Chatter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,800,600,700,300">
+    <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/normalize.css">
     <link rel="stylesheet" href="/styles/main.css">
 </head>
 <body>
+    
+	<ui-view></ui-view>
+
+    <!-- Angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+
+    <!-- Angular ui-router -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+
+    <!-- AngularFire  -->
+    <script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
+
+    <!-- Firebase  -->    
+    <script src="https://www.gstatic.com/firebasejs/3.7.8/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBknnlTwvQVNZQvh8xISssPqlRaKI6-Ews",
+        authDomain: "chatter-6aed3.firebaseapp.com",
+        databaseURL: "https://chatter-6aed3.firebaseio.com",
+        projectId: "chatter-6aed3",
+        storageBucket: "chatter-6aed3.appspot.com",
+        messagingSenderId: "594903253254"
+      };
+      firebase.initializeApp(config);
+    </script>
+
     <script src="/scripts/app.js"></script>
+    <script src="/scripts/controllers/MainCtrl.js"></script>
 </body>
 </html>

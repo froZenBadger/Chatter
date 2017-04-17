@@ -1,16 +1,16 @@
 {
-  "name": "bloc-frontend-project-starter",
+  "name": "Chatter",
   "version": "0.0.3",
-  "description": "Starter project for the Bloc Frontend Web Development",
+  "description": "Real time messaging web app powered by Angular & Firebase",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bloc/bloc-frontend-project-starter"
+    "url": "https://github.com/froZenBadger/Chatter"
   },
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
-  "author": "Bloc Inc",
+  "author": "Chris Palmer",
   "license": "ISC",
   "dependencies": {
     "hapi": "~7.5.0",
