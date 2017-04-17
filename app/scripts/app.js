@@ -7,9 +7,9 @@
             });
         
         $stateProvider
-            .state('Main', {
+            .state('main', {
                 url: '/',
-                controller: 'MainCtrl as Main',
+                controller: 'MainCtrl as main',
                 templateUrl: '/templates/main.html'
             })
             .state('PLACE2', {
