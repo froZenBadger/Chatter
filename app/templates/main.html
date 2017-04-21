@@ -1,10 +1,10 @@
-<section>
-    <body>
-        <p>Chatter away</p>
-        <div class="chat-rooms" ng-repeat="chat_room in main.test">
-            {{ chat_room }}
+<body>
+    <h1>{{ main.title }}</h1>
+    <a ui-sref="create">Create a chat room</a>
+        <div class="chat-rooms" 
+            ng-repeat="room in main.rooms">
+            <p>Available room</p>
+            <span>{{ room.$value }}</span>
         </div>
-        <p>{{ main.title }}</p>
-    </body>
+</body>
 
-</section>

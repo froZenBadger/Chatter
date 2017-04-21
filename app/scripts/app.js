@@ -12,9 +12,9 @@
                 controller: 'MainCtrl as main',
                 templateUrl: '/templates/main.html'
             })
-            .state('PLACE2', {
+            .state('create', {
                 url: '/',
-                controller: 'PLACE2Ctrl as PLACE2',
+                controller: 'Create_Ctrl as create',
                 templateUrl: '/templates/PLACE2.html'
             })
             .state('PLACE3', {
