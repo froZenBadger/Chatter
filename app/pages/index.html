@@ -1,44 +1,84 @@
 <!DOCTYPE html>
 <html ng-app="chatter">
-<head lang="en">
-    <meta charset="UTF-8">
-    <title>Chatter</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,800,600,700,300">
-    <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" type="text/css" href="styles/normalize.css">
-    <link rel="stylesheet" href="/styles/main.css">
-</head>
-<body>
-    
-	<ui-view></ui-view>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>Chatter</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Normalize -->
+        <link rel="stylesheet" type="text/css" href="styles/normalize.css">
+        <!-- Latest compiled and minified Bootstrap CSS CDN -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!-- Google Fonts -->
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,800,600,700,300">
+        <!-- Ionicons -->
+        <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+        <!-- Stylesheet -->
+        <link rel="stylesheet" href="/styles/main.css">
+    </head>
+    <body>
+        
+    	<ui-view></ui-view>
 
-    <!-- Angular -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+        <!-- jQuery -->
+        <script 
+          src="https://code.jquery.com/jquery-3.2.1.min.js"
+          integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+          crossorigin="anonymous"></script>
 
-    <!-- Angular ui-router -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+        
+        <!-- Angular -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
 
-    <!-- AngularFire  -->
-    <script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
+        <!-- Angular ui-router -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
 
-    <!-- Firebase  -->    
-    <script src="https://www.gstatic.com/firebasejs/3.7.8/firebase.js"></script>
-    <script>
-      // Initialize Firebase
-      var config = {
-        apiKey: "AIzaSyBknnlTwvQVNZQvh8xISssPqlRaKI6-Ews",
-        authDomain: "chatter-6aed3.firebaseapp.com",
-        databaseURL: "https://chatter-6aed3.firebaseio.com",
-        projectId: "chatter-6aed3",
-        storageBucket: "chatter-6aed3.appspot.com",
-        messagingSenderId: "594903253254"
-      };
-      firebase.initializeApp(config);
-    </script>
+        <script src="http://angular-ui.github.com/bootstrap/ui-bootstrap-tpls-0.2.0.js"></script>
 
-    <script src="/scripts/app.js"></script>
-    <script src="/scripts/services/Room.js"></script>
-    <script src="/scripts/controllers/MainCtrl.js"></script>
-</body>
+        <!-- AngularFire  -->
+        <script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
+
+        <!-- Firebase  -->    
+        <script src="https://www.gstatic.com/firebasejs/3.7.8/firebase.js"></script>
+        <script>
+          // Initialize Firebase
+          var config = {
+            apiKey: "AIzaSyBknnlTwvQVNZQvh8xISssPqlRaKI6-Ews",
+            authDomain: "chatter-6aed3.firebaseapp.com",
+            databaseURL: "https://chatter-6aed3.firebaseio.com",
+            projectId: "chatter-6aed3",
+            storageBucket: "chatter-6aed3.appspot.com",
+            messagingSenderId: "594903253254"
+          };
+          firebase.initializeApp(config);
+        </script>
+
+        <!-- Latest compiled and minified Bootstrap JS CDN -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        <!-- Bootstrap JS local fallback -->
+        <script>if(typeof($.fn.modal) === 'undefined') {document.write('<script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"><\/script>')}</script>
+
+        <!-- Latest compiled and minified UI Bootstrap CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap.min.js" integrity="sha256-6vbKDGwy9JmzGKxxeypGzCjyOmACDtgheaOQT6ZVafA=" crossorigin="anonymous"></script>
+
+        <!-- Latest compiled and minified UI Bootstrap Templates CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js" integrity="sha256-tyfWW2LtJQNI+l3F0h6xDV/ij6Mfn8lwSKHWOsmEgXM=" crossorigin="anonymous"></script>
+
+
+        <!-- Bootstrap CSS local fallback -->
+        <div id="bootstrapCssTest" class="hidden"></div>
+        <script>
+          $(function() {
+            if ($('#bootstrapCssTest').is(':visible')) {
+              $("head").prepend('<link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">');
+            }
+          });
+        </script>
+
+        <script src="/scripts/app.js"></script>
+        <script src="/scripts/services/Room.js"></script>
+        <script src="/scripts/controllers/MainCtrl.js"></script>
+        <script src="/scripts/controllers/ModalCtrl.js"></script>
+
+    </body>
 </html>

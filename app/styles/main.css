@@ -1,0 +1,16 @@
+/*button .main {
+    position: absolute;
+    right: 100px; 
+}*/
+.container .next {
+    color: #ff0000;
+    float: left;
+}
+/*#title {
+    float: left;
+}*/
+.main .btn {
+    float: left;
+    margin: 0 0 0 20px;  
+     
+}

@@ -1,5 +1,5 @@
 {
-  "name": "Chatter",
+  "name": "chatter",
   "version": "0.0.3",
   "description": "Real time messaging web app powered by Angular & Firebase",
   "repository": {

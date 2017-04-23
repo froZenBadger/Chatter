@@ -9,11 +9,11 @@
         $stateProvider
             .state('main', {
                 url: '/',
-                controller: 'MainCtrl as main',
+                controller: 'MainCtrl as main', 
                 templateUrl: '/templates/main.html'
             })
             .state('create', {
-                url: '/',
+                url: '/create',
                 controller: 'Create_Ctrl as create',
                 templateUrl: '/templates/PLACE2.html'
             })
@@ -25,6 +25,7 @@
     }
     
     angular
-        .module('chatter', ['ui.router', 'firebase'])
+        .module('chatter', ['ui.router', 'firebase', 'ui.bootstrap'])
         .config(config);
 })();
+           

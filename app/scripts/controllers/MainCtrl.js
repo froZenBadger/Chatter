@@ -1,10 +1,15 @@
 (function() {
-	function MainCtrl(Room) {
+	function MainCtrl($scope, Room) {
         this.title = "Chatter!";
-        this.rooms = Room.all;
+
+        $scope.roomArray = Room.all;
+
+        $scope.add = function() {
+            $scope.roomArray.$add($scope.room);
+        };
 	}
 	
 	angular
 		.module('chatter')
-		.controller('MainCtrl', ['Room', MainCtrl]);
+		.controller('MainCtrl', ['$scope', 'Room', MainCtrl]);
 })();
