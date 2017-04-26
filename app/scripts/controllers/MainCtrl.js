@@ -1,5 +1,5 @@
 (function() {
-	function MainCtrl($scope, Room, Time) {
+	function MainCtrl($scope, Room, Time, $uibModal) {
         this.title = "Chatter!";
 
         $scope.roomArray = Room.all;
@@ -22,10 +22,16 @@
             })();
             $scope.activeRoom = activeRoom;    
         }
-        
+
+        $scope.addRoomModal = function() {
+            var modalInstance = $uibModal.open({
+                templateUrl: '/templates/modal.html',
+                controller: 'ModalCtrl as modal',
+            });
+        }        
 	}
 	
 	angular
 		.module('chatter')
-		.controller('MainCtrl', ['$scope', 'Room', 'Time', MainCtrl]);
+		.controller('MainCtrl', ['$scope', 'Room', 'Time', '$uibModal', MainCtrl]);
 })();
