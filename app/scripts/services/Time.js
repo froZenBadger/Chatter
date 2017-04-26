@@ -14,10 +14,13 @@
             curMeridiem = objToday.getHours() > 12 ? "PM" : "AM";
         var today = curHour + ":" + curMinute + "." + curSeconds + curMeridiem + " " + dayOfWeek + " " + dayOfMonth + " of " + curMonth + ", " + curYear;
         var day = dayOfWeek + " " + dayOfMonth + " of " + curMonth + ", " + curYear; 
-
+        var msgTime = curHour + ":" + curMinute + curMeridiem;
+        var msgDay = dayOfWeek + ", " + curMonth + " " + dayOfMonth; 
         return {
             day: day,
-            today: today
+            today: today,
+            msgTime: msgTime,
+            msgDay: msgDay
         };
     }
 

@@ -1,19 +1,61 @@
 <body>
     <div id="home">
         <div class="container main">
-            <div id="title"><h1>{{ main.title }}</h1></div>
+            <div id="title">
+                <h1>
+                    {{ main.title }}
+                </h1>
+            </div>
         </div>    
         <div>
-            <h5 class="header"><div class="headerContent">Rooms available - Date created</div></h5>
-            <div id="newRoomBtn"><button type="button" class="main btn btn-secondary" data-toggle="modal" data-target="#createRoomModal">New room</button></div>
+            <h5 class="header">
+                <div class="headerContent">
+                    Rooms available - Date created
+                </div>
+            </h5>
+            <div id="newRoomBtn">
+                <button type="button" class="main btn btn-secondary" data-toggle="modal" data-target="#createRoomModal">
+                    New room
+                </button>
+            </div>
         </div>
-        <div id="mainContent" class="chat-room" ng-repeat="room in roomArray"><p class="text">
-            {{ room.name }} - {{ room.dateCreated}}</p>
+        <div id="mainContent" class="chat-room" ng-repeat="room in roomArray">
+            <p class="text">
+                <a ng-click="getActiveRoom($event)">
+                    {{ room.name }} - {{ room.dateCreated}}
+                </a>    
+            </p>
+        </div>
+        <div>
+            <h4>Test</h4>
+            <h4>{{ activeRoom }}</h4>
         </div>
         <div id="info">
             <h5>Page loaded on: {{ today }}</h5>
         </div>
     </div>
+
+    <!-- Individual chat room & messages -->
+    <div id="activeRoom">
+        <div id="activeRoomContent">
+            <div class="roomTitle">
+                <h2>
+                    {{ activeRoom || 'Pick a room'}}
+                </h2>
+            </div>
+            <div class="messageBoard">
+                <h5 class="tm">
+                    {{msgTime}}
+                </h5>
+                <h6 class="msg">
+                    Messages
+                </h6>
+            </div>
+        </div>
+    </div>
+
+    <!-- I'd like to remove modal html from main to separate template/modal.html -->
+
     <div class="container next">
         <div class="row">
             <div class="col-xs-12">

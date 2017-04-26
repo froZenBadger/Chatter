@@ -51,6 +51,35 @@
     margin-bottom: 15px;
 }
 
+#activeRoom {
+  width: 100%;
+  text-align: center;
+}
+
+#activeRoomContent {
+  position: relative;
+  display: inline-block;
+}
+
+.roomTitle {
+  
+}
+.messageBoard {
+  position: absolute;
+  padding-top: 25px;  
+  text-align: left;
+}
+
+/*.msg {
+  text-align: left;
+  margin-top: 15px; 
+}
+*/
+.tme {
+  display: inline-table;
+  margin-left: 150px;
+}
+
 #info { 
     height: 40px; 
     position: fixed; 
