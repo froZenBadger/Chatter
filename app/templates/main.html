@@ -19,43 +19,47 @@
                 </button>
             </div>
         </div>
-        <div id="mainContent" class="chat-room" ng-repeat="room in roomArray">
-            <p class="text">
-                <a ng-click="getActiveRoom($event)">
-                    {{ room.name }} - {{ room.dateCreated}}
-                </a>    
-            </p>
-        </div>
-        <div>
-            <h4>Test</h4>
-            <h4>{{ activeRoom }}</h4>
+        <div id="mainContent" class="chat-room">
+            <ul class="text">
+                <li ng-repeat="room in roomArray" ng-model="room">
+                    <a ng-click="test()">{{ room.name }}</a>
+                    <p>{{room.dateCreated}}</p>
+                </li>
+            </ul>
         </div>
         <div id="info">
             <h5>Page loaded on: {{ today }}</h5>
         </div>
     </div>
 
+
     <!-- Individual chat room & messages -->
-    <div id="activeRoom">
-        <div id="activeRoomContent">
-            <div class="roomTitle">
-                <h2>
-                    {{ activeRoom || 'Pick a room'}}
-                </h2>
+    <div class="tile is-ancestor" id="activeRoom">
+        <div class="tile is-8 is-vertical is-offset-4 is-parent" id="activeRoomContent">
+            <h2 style="margin-bottom: 50px;">{{ activeRoom || 'Pick a room'}}</h2>
+            <div class="tile is-child box message" ng-repeat="message in messageArray">
+                <p class='time' style="text-align: left;">{{ message.sentAt }}</p>
+                <p class="message" style="text-align: left;">{{ message.username }}</p>
+                <p class="message" style="text-align: left;">{{ message.content }}</p>
+                <p class="message" style="text-align: left;">{{ message.roomId }}</p>
             </div>
-            <div class="messageBoard">
-                <h5 class="tm">
-                    {{msgTime}}
-                </h5>
-                <h6 class="msg">
-                    Messages
-                </h6>
+            <div class="tile is-child box message">
+                <p class='time' style="text-align: left;">{{ msgTime }}</p>
+                <p class="message" style="text-align: left;">Message</p>
+            </div>
+            <div class="tile is-child box message">
+                <p class='time' style="text-align: left;">{{ msgTime }}</p>
+                <p class="message" style="text-align: left;">Message</p>
+            </div>
+            <div class="tile is-child box message">
+                <p class='time' style="text-align: left;">{{ msgTime }}</p>
+                <p class="message" style="text-align: left;">Message</p>
             </div>
         </div>
     </div>
 
-    <!-- I'd like to remove modal html from main to separate template/modal.html -->
 
+    <!-- I'd like to remove modal html from main to separate template/modal.html -->
     <div class="container next">
         <div class="row">
             <div class="col-xs-12">
