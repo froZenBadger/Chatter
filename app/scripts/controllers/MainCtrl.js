@@ -30,7 +30,7 @@
             });
         }        
 	}
-	
+
 	angular
 		.module('chatter')
 		.controller('MainCtrl', ['$scope', 'Room', 'Time', '$uibModal', MainCtrl]);
