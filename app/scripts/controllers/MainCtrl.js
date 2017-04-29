@@ -4,10 +4,7 @@
 
         $scope.roomArray = Room.all;
 
-        $scope.add = function() {
-            var data = $scope.room;
-            $scope.roomArray.$add(data);
-        };
+        
         $scope.today = Time.today;
         $scope.day = Time.day;
         $scope.msgTime = Time.msgTime;
