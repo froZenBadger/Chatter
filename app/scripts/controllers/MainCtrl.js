@@ -10,16 +10,6 @@
         $scope.msgTime = Time.msgTime;
         $scope.msgDay = Time.msgDay;
 
-        var activeRoom;
-
-        $scope.getActiveRoom = function($event) {
-            var xy = (function() {
-                var element = $event.currentTarget;
-                activeRoom = element.innerHTML;
-            })();
-            $scope.activeRoom = activeRoom;    
-        }
-
         $scope.addRoomModal = function() {
             var modalInstance = $uibModal.open({
                 templateUrl: '/templates/modal.html',

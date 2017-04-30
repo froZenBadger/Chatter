@@ -10,7 +10,7 @@
         <div>
             <h5 class="header">
                 <div class="headerContent">
-                    Rooms available - Date created
+                    Rooms available
                 </div>
             </h5>
             <div id="newRoomBtn">
@@ -21,9 +21,7 @@
         </div>
         <div id="mainContent" class="chat-room" ng-repeat="room in roomArray">
             <p class="text">
-                <a ng-click="getActiveRoom($event)">
-                    {{ room.name }} - {{ room.dateCreated}}
-                </a>    
+                <a ng-click="getActiveRoom($event)">{{ room.name }}</a>    
             </p>
         </div>
         <div>
