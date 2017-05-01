@@ -25,15 +25,12 @@
                     <a ng-click="getActiveRoom(room)">{{ room.name }}</a>
                 </p>
             </ul>
-            <div id="info">
-                <h5>Page loaded on: {{ today }}</h5>
-            </div>
         </div>
     </div>
     <!-- Individual chat room & messages -->
     <div class="tile is-ancestor" id="activeRoom">
-        <div class="tile is-8 is-vertical is-offset-4 is-parent" id="activeRoomContent">
-            <h2 style="margin-bottom: 50px;">{{ activeRoom || 'Pick a room'}}</h2>
+        <div class="tile is-6 is-vertical is-offset-4 is-parent" id="activeRoomContent">
+            <h2 style="margin-bottom: 50px;" class="roomText">{{ activeRoom || 'Pick a room'}}</h2>
             <li class="tile is-child box message" ng-repeat="message in messageArray">
                 <h6 class="message" style="text-align: left;">{{ message.username }} sent at  {{ message.sentAt }}</h6>
                 <h5 class="message" style="text-align: right;">{{ message.content }}</h5>
@@ -41,6 +38,21 @@
         </div>
     </div>
 
+    <div id="info">
+        <h5>Page loaded on: {{ today }}</h5>
+    </div>
+    <div id="nav">
+        <div class="navText">
+            <h3>Sign in here</h3>
+            <div>
+                <ul class="contactText">
+                    <h4>Contacts</h4>
+                    <p>Elon Musk</p>
+                    <p>Ray Kurzweil</p>
+                </ul>
+            </div>
+        </div>
+    </div>
 
 
 </body>

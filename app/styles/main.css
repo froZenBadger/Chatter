@@ -52,13 +52,17 @@
 }
 
 #activeRoom {
-  width: 100%;
+  width: 90%;
   text-align: center;
 }
 
 #activeRoomContent {
   position: relative;
   display: inline-block;
+}
+
+.roomText {
+  top: 9%;
 }
 
 .roomTitle {
@@ -88,4 +92,36 @@
     background-color: #393838; 
     opacity: 1;
     color: white;
+    text-align: center;
+}
+
+#nav { 
+    width: 200px; 
+    position: fixed; 
+    right: 0%;
+    height: 100%; 
+    background-color: #393838; 
+    opacity: 1;
+    color: white;
+    text-align: center;
+    top: 0%;
+    bottom: 15%;
+    display: table;
+}
+.navText {
+    display: table-cell;
+    vertical-align: text-top;
+    padding: 2px;
+    text-align: center;
+}
+
+.contactText {
+  margin-top: 15px;
+  display: table-cell;
+  text-align: center;
+}
+.contactText h4 {
+    border-bottom: 1px solid white;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
 }
