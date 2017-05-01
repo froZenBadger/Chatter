@@ -1,10 +1,8 @@
 (function() {
-    function ModalCtrl(Room, $uibModalInstance) {
+    function ModalCtrl(Room, $uibModalInstance, $scope) {
 
-        this.add = function(roomName) {
-            // var data = $scope.room;
-            Room.addRoom(roomName);
-        // Move your add room logic here.  Something like:  Room.addRoom(roomName); 
+        this.add = function() {
+            Room.addRoom($scope.room);
             $uibModalInstance.close();
         };
 
@@ -15,5 +13,5 @@
 
     angular
         .module('chatter')
-        .controller('ModalCtrl', ['Room', '$uibModalInstance', ModalCtrl]);
+        .controller('ModalCtrl', ['Room', '$uibModalInstance', '$scope', ModalCtrl]);
 })();
