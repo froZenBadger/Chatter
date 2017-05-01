@@ -113,6 +113,13 @@
     vertical-align: text-top;
     padding: 2px;
     text-align: center;
+
+}
+
+#signInBtn {
+  margin-top: 11px;
+  margin-right: 33px;
+  margin-bottom: 22px;
 }
 
 .contactText {

@@ -1,5 +1,5 @@
 (function() {
-	function MainCtrl($scope, Room, Time, Message) {
+	function MainCtrl($scope, Room, Time, Message, $uibModal) {
 
         this.title = "Chatter!";
 
@@ -19,6 +19,13 @@
             var modalInstance = $uibModal.open({
                 templateUrl: '/templates/modal.html',
                 controller: 'ModalCtrl as modal',
+            });
+        };        
+
+        $scope.signInModal = function() {
+            var modalInstance = $uibModal.open({
+                templateUrl: '/templates/signInModal.html',
+                controller: 'LogModalCtrl as logModal',
             });
         };        
 	}
