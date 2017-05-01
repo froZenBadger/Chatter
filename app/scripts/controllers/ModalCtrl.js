@@ -1,12 +1,17 @@
 (function() {
+    function ModalCtrl(Room, $uibModalInstance, $scope) {
 
-    function ModalCtrl($scope, $timeout, $dialog){
-        $timeout(function(){
-            $dialog.dialog({}).open('/scripts/templates/directives/chatRoomModal.html');  
-        }, 3000);  
+        this.add = function() {
+            Room.addRoom($scope.room);
+            $uibModalInstance.close();
+        };
+
+        this.cancel = function() {
+            $uibModalInstance.dismiss();
+        };  
     }
 
     angular
         .module('chatter')
-        .controller('ModalCtrl', ['ui.bootstrap', ModalCtrl]);
+        .controller('ModalCtrl', ['Room', '$uibModalInstance', '$scope', ModalCtrl]);
 })();

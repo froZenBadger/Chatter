@@ -1,15 +1,10 @@
 (function() {
 	function MainCtrl($scope, Room, Time, Message) {
+
         this.title = "Chatter!";
 
         $scope.roomArray = Room.all;
-        
-        // this is used in modal to add input to array
-        $scope.add = function() {
-            var data = $scope.room;
-            $scope.roomArray.$add(data);
-        };
-        // ways to access time 
+
         $scope.today = Time.today;
         $scope.day = Time.day;
         $scope.msgTime = Time.msgTime;
@@ -18,12 +13,17 @@
         $scope.getActiveRoom = function(room) {
             $scope.activeRoom = room.name; 
             $scope.messageArray = Message.getByRoomId(room.$id);
-            console.log('room', room);
-            console.log($scope.messageArray);
         };
+
+        $scope.addRoomModal = function() {
+            var modalInstance = $uibModal.open({
+                templateUrl: '/templates/modal.html',
+                controller: 'ModalCtrl as modal',
+            });
+        };        
 	}
-	
+
 	angular
 		.module('chatter')
-		.controller('MainCtrl', ['$scope', 'Room', 'Time', 'Message', MainCtrl]);
+		.controller('MainCtrl', ['$scope', 'Room', 'Time', 'Message', '$uibModal', MainCtrl]);
 })();

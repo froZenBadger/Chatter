@@ -1,0 +1,16 @@
+<div class="modal-header">
+    <button class="close" ng-click="modal.cancel()">&times;</button>
+    <h4 class="modal-title">Create new room</h4>
+</div>         
+<div class="modal-body">
+    <form>
+        <div class="form-group">
+            <label for="inputRoomName">Enter a room name</label>
+            <input class="form-control" placeholder="My New Room" type="text" id="inputRoomName" ng-model="room.name"> 
+        </div>
+    </form>    
+</div>
+<div class="modal-footer">
+    <button type="button" ng-click='modal.cancel()' class="btn btn-default" >Cancel</button>
+    <button type="button" ng-click="modal.add()" class="btn btn-primary" >Create room</button>
+</div>      
