@@ -9,9 +9,9 @@
         </div>    
         <div>
             <h5 class="header">
-                <div class="headerContent">
+                <ul class="headerContent">
                     Rooms available
-                </div>
+                </ul>
             </h5>
             <div id="newRoomBtn">
                 <button type="button" class="main btn btn-secondary" ng-click="addRoomModal()">
@@ -21,24 +21,22 @@
         </div>
         <div id="mainContent" class="chat-room">
             <ul class="text">
-                <li ng-repeat="room in roomArray">
+                <p ng-repeat="room in roomArray">
                     <a ng-click="getActiveRoom(room)">{{ room.name }}</a>
-                </li>
+                </p>
             </ul>
             <div id="info">
                 <h5>Page loaded on: {{ today }}</h5>
             </div>
         </div>
-
+    </div>
     <!-- Individual chat room & messages -->
     <div class="tile is-ancestor" id="activeRoom">
         <div class="tile is-8 is-vertical is-offset-4 is-parent" id="activeRoomContent">
             <h2 style="margin-bottom: 50px;">{{ activeRoom || 'Pick a room'}}</h2>
             <li class="tile is-child box message" ng-repeat="message in messageArray">
-                <p class='time' style="text-align: left;">{{ message.sentAt }}</p>
-                <p class="message" style="text-align: left;">{{ message.username }}</p>
-                <p class="message" style="text-align: left;">{{ message.content }}</p>
-                <p class="message" style="text-align: left;">{{ message.roomId }}</p>
+                <h6 class="message" style="text-align: left;">{{ message.username }} sent at  {{ message.sentAt }}</h6>
+                <h5 class="message" style="text-align: right;">{{ message.content }}</h5>
             </li>
         </div>
     </div>
