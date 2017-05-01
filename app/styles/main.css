@@ -3,7 +3,7 @@
     position: fixed; 
     left: 0%;
     height: 100%; 
-    background-color: #393838; 
+    background-color: #3a2a38; 
     opacity: 1;
     color: white;
 }
@@ -17,6 +17,11 @@
   left: 0%;
   margin-right: 25px;
   margin-left: 25px;
+  color: #6e8453;
+}
+
+.header .headerContent {
+  color: #afb56c;
 }
 
 #newRoomBtn {
@@ -32,7 +37,7 @@
 
 .header {
     display: block;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid #c4761d;
     margin-bottom: 15px;
     padding-bottom: 15px;
 }
@@ -89,9 +94,9 @@
     position: fixed; 
     bottom:0%;
     width:100%; 
-    background-color: #393838; 
+    background-color: #3a2a38; 
     opacity: 1;
-    color: white;
+    color: #ac91ad;
     text-align: center;
 }
 
@@ -100,7 +105,7 @@
     position: fixed; 
     right: 0%;
     height: 100%; 
-    background-color: #393838; 
+    background-color: #3a2a38; 
     opacity: 1;
     color: white;
     text-align: center;
@@ -122,13 +127,24 @@
   margin-bottom: 22px;
 }
 
+a {
+  color: #776175;
+}
+
 .contactText {
   margin-top: 15px;
   display: table-cell;
   text-align: center;
 }
+
 .contactText h4 {
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid #c4761d;
     margin-bottom: 15px;
     padding-bottom: 15px;
+    color: #6e8453;
 }
+
+.contactText p {
+    color: #776175;
+}
+

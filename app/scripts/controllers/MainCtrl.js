@@ -18,14 +18,16 @@
         $scope.addRoomModal = function() {
             var modalInstance = $uibModal.open({
                 templateUrl: '/templates/modal.html',
-                controller: 'ModalCtrl as modal',
+                controller: 'ModalCtrl as modal'
             });
         };        
 
         $scope.signInModal = function() {
             var modalInstance = $uibModal.open({
-                templateUrl: '/templates/signInModal.html',
-                controller: 'LogModalCtrl as logModal',
+                animation: true,
+                backdrop: 'static',
+                templateUrl: '/templates/loginModal.html',
+                controller: 'LoginModalCtrl as loginModal'
             });
         };        
 	}

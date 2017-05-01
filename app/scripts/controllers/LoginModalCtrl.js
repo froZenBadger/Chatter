@@ -1,5 +1,5 @@
 (function() {
-    function LogModalCtrl($uibModalInstance, $scope) {
+    function LoginModalCtrl(Room, $uibModalInstance, $scope) {
 
         // this.signIn = function () {};
 
@@ -10,5 +10,5 @@
 
     angular
         .module('chatter')
-        .controller('LogModalCtrl', ['Room', '$uibModalInstance', '$scope', LogModalCtrl]);
+        .controller('LoginModalCtrl', ['Room', '$uibModalInstance', '$scope', LoginModalCtrl]);
 })();
