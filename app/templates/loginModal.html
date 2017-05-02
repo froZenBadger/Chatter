@@ -1,18 +1,17 @@
 <div class="modal-header">
-    <button class="close" ng-click="loginModal.cancel()">&times;</button>
-    <h4 class="modal-title">Sign in as user</h4>
+    <h4 class="modal-title centered">Sign in as user</h4>
 </div>         
 <div class="modal-body">
     <form>
         <div class="form-group">
-            <label for="inputUserName">Username</label>
-            <input class="form-control" placeholder="Superman" type="text" id="inputUserName" ng-model="messages.username"> 
-            <label for="inputPassword">Password</label>
-            <input class="form-control" placeholder="XXXXX" type="text" id="inputPassword"> 
+            <label for="inputUsername">Username</label>
+            <input class="form-control" placeholder="Justin Credible" type="text" id="inputUsername" ng-model="user.name"> 
+            <br>
+            <label for="inputPassword">Secure you account</label>
+            <input class="form-control" placeholder="•••••••" type="text" id="inputPassword" ng-model="password">
         </div>
     </form>    
 </div>
 <div class="modal-footer">
-    <button type="button" ng-click='loginModal.cancel()' class="btn btn-default" >Cancel</button>
-    <button type="button" ng-click="loginModal.login()" class="btn btn-primary" >Login</button>
+    <button type="button" ng-click="loginModal.login()" class="btn btn-secondary pull-left" >Login</button>
 </div>      

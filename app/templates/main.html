@@ -44,9 +44,11 @@
     <div id="nav">
         <div class="navText">
             <div id="signInBtn">
-                <button type="button" class="main btn btn-secondary" ng-click="signInModal()">
-                    Sign in 
-                </button>
+                <div>
+                     <h5 class="loginInfo">Hello, {{ currentUser() || 'please sign in'}}</h5> 
+                     <h6 id="change" class="loginInfo">(Not you, <a ng-click="signInModal()">change accounts</a></h6>
+                </div>
+            <a><h4 class="ion-gear-a"></h4></a>    
             </div>
             <div>
                 <ul class="contactText">

@@ -1,7 +1,13 @@
 (function() {
-    function LoginModalCtrl(Room, $uibModalInstance, $scope) {
+    function LoginModalCtrl($uibModalInstance, $scope, $cookies) {
 
-        // this.signIn = function () {};
+        this.login = function() {
+            let userCookie = 'chatterCurrentUser';
+            if ($scope.user.name !== '') {
+                let user = $cookies.putObject(userCookie, $scope.user);
+                $uibModalInstance.close();    
+            }
+        };
 
         this.cancel = function() {
             $uibModalInstance.dismiss();
@@ -10,5 +16,5 @@
 
     angular
         .module('chatter')
-        .controller('LoginModalCtrl', ['Room', '$uibModalInstance', '$scope', LoginModalCtrl]);
+        .controller('LoginModalCtrl', ['$uibModalInstance', '$scope', '$cookies', LoginModalCtrl]);
 })();
