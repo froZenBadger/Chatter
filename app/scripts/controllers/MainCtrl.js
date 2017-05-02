@@ -21,10 +21,12 @@
                 return ($cookies.getObject('chatterCurrentUser')).name;
             } else { 'please sign in';}
         }
-
+        
+        var id = null;
         $scope.getActiveRoom = function(room) {
             $scope.activeRoom = room.name; 
             $scope.messageArray = Message.getByRoomId(room.$id);
+            id = room.$id;
         };
 
         $scope.addRoomModal = function() {
@@ -46,6 +48,22 @@
                 controller: 'LoginModalCtrl as loginModal'
             });
         };        
+
+        var updateMessages = function(msg) {
+            $scope.messageArray = Message.getByRoomId(room.$id);
+        };
+
+        $scope.sendMessage = function(msg) {
+            msg.roomId = id;
+            msg.sentAt = $scope.msgDay + ' at ' + $scope.msgTime;
+            msg.username = $cookies.getObject('chatterCurrentUser').name;
+            $scope.message = Message.send(msg);
+            updateMessages(msg);
+        };
+    
+        $scope.clear = function() {
+            $scope.messageArray = [];
+        };    
     }
 
 	angular

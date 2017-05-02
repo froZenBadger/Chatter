@@ -32,9 +32,14 @@
         <div class="tile is-6 is-vertical is-offset-4 is-parent" id="activeRoomContent">
             <h2 style="margin-bottom: 50px;" class="roomText">{{ activeRoom || 'Pick a room'}}</h2>
             <li class="tile is-child box message" ng-repeat="message in messageArray">
-                <h6 class="message" style="text-align: left;">{{ message.username }} sent at  {{ message.sentAt }}</h6>
+                <h6 class="message" style="text-align: left;">{{ message.username }} sent {{ message.sentAt }}</h6>
                 <h5 class="message" style="text-align: right;">{{ message.content }}</h5>
             </li>
+            <input class="newMsg" style="width:300px" placeholder="Type your message here" type="text" id="inputNewMsg" ng-model="message.content"> 
+            <button type="button" class="main btn btn-secondary pull-right" ng-click="sendMessage(message)">
+                    Send
+            </button>
+            <button type="button" class="main btn btn-default pull-left" ng-click="clear()">Clear</button>
         </div>
     </div>
 
