@@ -17,10 +17,10 @@
         //     } else { 'please sign in';}
         // })();
         $scope.currentUser = function() {
-            if($cookies.getObject('chatterCurrentUser') !== '') {
+            if($cookies.getObject('chatterCurrentUser')) {
                 return ($cookies.getObject('chatterCurrentUser')).name;
-            } else { 'please sign in';}
-        }
+            } else { return 'please sign in';}
+        };
         
         var id = null;
         $scope.getActiveRoom = function(room) {

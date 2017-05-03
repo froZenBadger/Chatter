@@ -15,7 +15,7 @@
         var today = curHour + ":" + curMinute + "." + curSeconds + curMeridiem + " " + dayOfWeek + " " + dayOfMonth + " of " + curMonth + ", " + curYear;
         var day = dayOfWeek + " " + dayOfMonth + " of " + curMonth + ", " + curYear; 
         var msgTime = curHour + ":" + curMinute + curMeridiem;
-        var msgDay = dayOfWeek + ", " + curMonth + " " + dayOfMonth; 
+        var msgDay = dayOfWeek + ", " + curMonth+ " " + dayOfMonth; 
         return {
             day: day,
             today: today,
